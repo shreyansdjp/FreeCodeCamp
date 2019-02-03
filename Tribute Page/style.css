@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body {
     font-family: 'Raleway', sans-serif;
@@ -6,7 +7,16 @@ body {
     padding: 0;
     background-color: rgba(1, 1, 1, 0.8);
     color: white;
-    font-size: 24px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+#title p, a, h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: white;
 }
 
 .normal-font {
@@ -14,15 +24,31 @@ body {
     text-align: justify;
 }
 
+.text-center {
+    text-align: center;
+}
+
 img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px 15px;
+    border-bottom: 1px solid white;
+    border-radius: 5px;
 }
 
 #main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(3, 0.4fr);
     grid-gap: 10px;
 }
 
@@ -30,18 +56,27 @@ img {
     background-color: #28bf22;
     grid-column-start: 1;
     grid-column-end: 5;
-    align-self: start;
     text-align: center;
+    padding: 0px 10px 20px 10px;
 }
 
 #title h1 {
     text-decoration: underline;
 }
 
+#socials a {
+    margin: 10px 20px;
+}
+
+#socials i{
+    color: white;
+}
+
 #img-div {
     grid-area: 2/2/3/4;
     justify-items: center;
     align-self: center;
+    padding: 10px;
 }
 
 #tribute-info {
@@ -49,7 +84,25 @@ img {
     grid-row-start: 3;
     grid-column-start: 2;
     grid-column-end: 4;
-    text-align: center;
+}
+
+#latest {
+    grid-row-start: 4;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    margin-bottom: 20px;
+}
+
+#latest iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #28bf22;
+    grid-row-start: 5;
+    grid-column-start: 1;
+    grid-column-end: 5;
 }
 
 .subscribe-btn {
@@ -62,10 +115,29 @@ img {
     text-align: center;
 }
 
-hr {
-    grid-row-start: 3;
-    grid-column-start: 1;
-    grid-column-end: 5;
-    width: 80%;
-    height: 0;
+@media (max-width: 768px) {
+    #img-div {
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        padding: 20px;
+    }
+
+    #tribute-info {
+        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+    #latest {
+        grid-row-start: 4;
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+    
+    footer {
+        grid-row-start: 5;
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
 }
