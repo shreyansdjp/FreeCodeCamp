@@ -12,6 +12,4 @@ Links to Codepen for viewing the Project :
 
 Follow Me On
 
-[Github](https://github.com/shreyansdjp)
-
 [Instagram](https://www.instagram.com/programming_days/)
